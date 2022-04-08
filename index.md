@@ -32,3 +32,10 @@ Try again!
 print("Hello World!")
 System.out.println("Hello World!");
 ```
+
+New Changes via VS Code
+```
+# VS Code
+print("Hello World again!")
+System.out.println("Hello World again!");
+```
