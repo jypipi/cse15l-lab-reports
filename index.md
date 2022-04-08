@@ -39,5 +39,8 @@ New Changes via VS Code
 print("Hello World again!")
 System.out.println("Hello World again!");
 ```
+Way 1:
+[Lab Report 1](lab-report-1-week-2.html)
 
+Way 2:
 [Lab Report 1](https://jypipi.github.io/cse15l-lab-reports/lab-report-1-week-2.html)
