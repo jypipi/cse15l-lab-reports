@@ -122,6 +122,7 @@ Now, we're able to successfully transfer files between local and remote hosts!
 As you may see in the above steps, password is often needed when we perform some tasks with a terminal. Thus, if we can avoid repetitively typing the password, we can save much time in the future. The solution is SSH keys, which creates a pair of files called *public key* and *private key* to help us skip entering password.
 
 > Here're the steps to set up SSH keys:
+
 ```
 # On local host
 $ ssh-keygen
