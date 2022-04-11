@@ -164,10 +164,15 @@ $ scp /Users/<user-name>/.ssh/id_rsa.pub cs15lsp22xxx@ieng6.ucsd.edu:~/.ssh/auth
 
 > Here's what I did to perform the above steps (Windows OS) :
 * On local host: open PowerShell #1
+
 ![Image](Picture6.png)
+
 * PowerShell #2: Run as an Administrator
+
 ![Image](Picture7.png)
+
 * Go back to PowerShell #1
+
 ![Image](Picture8.png)
 
 Now you should be able to `ssh` and `scp` from this local host to the remote server without password.
