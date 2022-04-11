@@ -163,6 +163,7 @@ $ scp /Users/<user-name>/.ssh/id_rsa.pub cs15lsp22xxx@ieng6.ucsd.edu:~/.ssh/auth
 ```
 
 > Here's what I did to perform the above steps (Windows OS) :
+
 * On local host: open PowerShell #1
 
 ![Image](Picture6.png)
