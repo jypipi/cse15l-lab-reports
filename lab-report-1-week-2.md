@@ -122,6 +122,7 @@ Now, we're able to successfully transfer files between local and remote hosts!
 As you may see in the above steps, password is often needed when we perform some tasks with a terminal. Thus, if we can avoid repetitively typing the password, we can save much time in the future. The solution is SSH keys, which creates a pair of files called *public key* and *private key* to help us skip entering password.
 
 > Here're the steps to set up SSH keys:
+
 ```
 # On local host
 $ ssh-keygen
@@ -160,12 +161,19 @@ $ exit
 # On local host
 $ scp /Users/<user-name>/.ssh/id_rsa.pub cs15lsp22xxx@ieng6.ucsd.edu:~/.ssh/authorized_keys
 ```
+
 > Here's what I did to perform the above steps (Windows OS) :
+
 * On local host: open PowerShell #1
+
 ![Image](Images/Lab1-Report/Picture6.png)
+
 * PowerShell #2: Run as an Administrator
+
 ![Image](Images/Lab1-Report/Picture7.png)
+
 * Go back to PowerShell #1
+
 ![Image](Images/Lab1-Report/Picture8.png)
 
 Now you should be able to `ssh` and `scp` from this local host to the remote server without password.
