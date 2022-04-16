@@ -14,7 +14,7 @@ Follow the instructions on the [Visual Studio Code Website](https://code.visuals
 2. Download and follow the instructions to complete the installation.
 3. After completing these steps, you will get the following window when openning VScode:
 
-![Image](Picture1.png)
+![Image](Images/Lab1-Report/Picture1.png)
 
 **Congratulations!** You get the first step done! Let's move on to the next topic.
 
@@ -47,12 +47,12 @@ $ ssh cs15lsp22xxx@ieng6.ucsd.edu
 
 After entering your password, now you should be able to login to your account:
 
-![Image](Picture2.png)
+![Image](Images/Lab1-Report/Picture2.png)
 
 ## Trying Some Commands
 Here is a [summary of Linux commands](https://files.fosswire.com/2007/08/fwunixref.pdf):
 
-![Image](Picture3.png)
+![Image](Images/Lab1-Report/Picture3.png)
 
 > Let's try some useful and regularly used commands:
 
@@ -84,7 +84,7 @@ $ rm -rf hello
 
 The below image shows what I tried and the outcomes:
 
-![Image](Picture4.png)
+![Image](Images/Lab1-Report/Picture4.png)
 
 To disconnect to the remote host, try:
 ```
@@ -114,7 +114,7 @@ As shown in the below image, I tried:
 4. Copy HELLO.txt back from remote to local host.
 > Notes: Use backslash for Windows directory and forward slash for Linux directory.
 
-![Image](Picture5.png)
+![Image](Images/Lab1-Report/Picture5.png)
 
 Now, we're able to successfully transfer files between local and remote hosts!
 
@@ -162,15 +162,15 @@ $ scp /Users/<user-name>/.ssh/id_rsa.pub cs15lsp22xxx@ieng6.ucsd.edu:~/.ssh/auth
 ```
 > Here's what I did to perform the above steps (Windows OS) :
 * On local host: open PowerShell #1
-![Image](Picture6.png)
+![Image](Images/Lab1-Report/Picture6.png)
 * PowerShell #2: Run as an Administrator
-![Image](Picture7.png)
+![Image](Images/Lab1-Report/Picture7.png)
 * Go back to PowerShell #1
-![Image](Picture8.png)
+![Image](Images/Lab1-Report/Picture8.png)
 
 Now you should be able to `ssh` and `scp` from this local host to the remote server without password.
 
-![Image](Picture9.png)
+![Image](Images/Lab1-Report/Picture9.png)
 
 ## Optimizing Remote Running
 In this section, we use what we've learned to optimize the process for editting a file locally (e.g. WhereAmI.java), copying it to the remote server, and running it.
@@ -188,7 +188,7 @@ In this way, we can complete the task with only two commands:
 2. Log into the remote host and then run the file.
 3. Disconnect to the remote host.
 
-![Image](Picture10.png)
+![Image](Images/Lab1-Report/Picture10.png)
 
 # Conclusion
 

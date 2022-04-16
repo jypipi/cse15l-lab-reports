@@ -7,7 +7,7 @@ Here is my [new GitHub Page](https://jypipi.github.io/cse15l-lab-reports/)
 
 Screenshot:
 
-![Image](https://github.com/jypipi/cse15l-lab-reports/blob/main/2.png)
+![Image](Images/Index/2.png)
 
 > Oops! 404 Error!
 
@@ -25,7 +25,7 @@ Screenshot:
 Try again!
 `https://jypipi.github.io/cse15l-lab-reports/`
 
-![Image](https://github.com/jypipi/cse15l-lab-reports/blob/main/3.png)
+![Image](Images/Index/3.png)
 
 ```
 # Code block
