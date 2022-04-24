@@ -1,6 +1,6 @@
 # CSE15L Lab Reports
 
-Welcome to [my main Page](https://jypipi.github.io/cse15l-lab-reports/)!
+Welcome to [my main Page](https://jypipi.github.io/cse15l-lab-reports/index.html)!
 
 ## Lab Report 1 -- Week 2
 
