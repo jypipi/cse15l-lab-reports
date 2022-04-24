@@ -94,6 +94,8 @@ AS for the second test, these conditions were checked:
 
 1) The file starts with a link --- ***Failed***
 
+- Symptom: String index out of bound
+
 2) Brackets and parentheses far apart in the file --- ***Passed***
 
 ```
@@ -123,22 +125,22 @@ AS for the second test, these conditions were checked:
 
 * Screenshot of Inputs and Incorrect Outputs:
 
-    ![image](Images/Lab-Report-2/test3_file.png)
+![image](Images/Lab-Report-2/test3_file.png)
 
-> Debugging ([Code Changes](https://github.com/jypipi/markdown-parser/commit/19b2f41c30fd56e76afb803eb30f00cd0c4b2aa1)):
+* Debugging ([Code Changes](https://github.com/jypipi/markdown-parser/commit/19b2f41c30fd56e76afb803eb30f00cd0c4b2aa1)):
 
 - Added an if-else statement to check if currentIndex == 0.
-    - If at the beginning of the file (currentIndex == 0), 
+    * If at the beginning of the file (currentIndex == 0), 
       check if there's a "!" at substring(0, 1);
-    - Else, check if there's a "!" before the open bracket.
+    * Else, check if there's a "!" before the open bracket.
 
 ![Image](Images/Lab-Report-2/CodeDiffTestFile3.png)
 
-> Outputs after Debugging:
+* Outputs after Debugging:
 
 ![Image](Images/Lab-Report-2/fixedTest3.png)
 
-> Discussion:
+* Discussion:
 
 As for this test, the failure-inducing input was putting an URL (including [] and ()) at the very beginning of the md file, which caused the symptom: string index out of bound. It occurred because the code extracted a substring representing an URL from index "openBracket - 1" to index "openBracket".
 
@@ -151,6 +153,8 @@ In this case, since the open bracket of the above failure-inducing input is at 0
 For the third test, this conditions was checked:
 
 1) No link in a pair of parentheses --- ***Failed***
+
+- Symptom: return an empty string
 
 ```
 # Input for Condition 1
@@ -168,9 +172,9 @@ For the third test, this conditions was checked:
 
 * Screenshot of Incorrect Outputs:
 
-    ![image](Images/Lab-Report-2/test4_file.png)
+![image](Images/Lab-Report-2/test4_file.png)
 
-> Debugging ([Code Changes](https://github.com/jypipi/markdown-parser/commit/80fc94ed26e722aeb62b99d93ec19eb15c15c260)):
+* Debugging ([Code Changes](https://github.com/jypipi/markdown-parser/commit/80fc94ed26e722aeb62b99d93ec19eb15c15c260)):
 
 1) Added two int variables, start and end, to store the indices used to check if there's a "!" before the open bracket (Simplified the codes).
 
@@ -180,11 +184,11 @@ For the third test, this conditions was checked:
 
 ![Image](Images/Lab-Report-2/CodeDiffTestFile4_b.png)
 
-> Outputs after Debugging:
+* Outputs after Debugging:
 
 ![Image](Images/Lab-Report-2/fixedTest4.png)
 
-> Discussion:
+* Discussion:
 
 As for the last test, the failure-inducing input was that no link existed in a pair of parentheses following a pair of brackets. It caused the symptom: printing out empty strings. That was because the bug by which the program did not check if any returned string was empty. Thus, it would consider empty URL strings legal and return it.
 
@@ -193,8 +197,11 @@ As for the last test, the failure-inducing input was that no link existed in a p
 These are the three code changes that were done in lab 3 for the following conditions:
 
 1) Print out extra spaces
+
 2) Image inference
+
 3) A file that starts with a link
+
 4) Empty strings within parentheses
 
 These experiences reveal how a program is improved by testing and checking. This lab goes through the process of error identification and debugging, which is essential to future programming work. Understanding its advantages, we'll be able to achieve more goals and have more fun when coding. Hope this report helps!
