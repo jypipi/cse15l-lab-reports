@@ -43,9 +43,11 @@ In the first test, these conditions were checked:
 2) Empty lines exist between two links --- ***Passed***
 
 3) Redundant spaces within parentheses containing a link --- ***Failed***
+
     - Symptom: two spaces are printed at both ends of the link.
 
 4) Image inference --- ***Failed***
+
     - Symptom (Logic error): print out the image directory.
 
 ```
@@ -63,22 +65,26 @@ In the first test, these conditions were checked:
 
     ![Image](Images/Lab-Report-2/test2_file.png)
 
+
 > Debugging ([Code Changes](https://github.com/jypipi/markdown-parser/commit/219add11b4374cfa105d3b29c2e2f7bb3fb55110)):
 
-1) Added an if statement to check if a "!" exists before [].
-2) Remove extra spaces in the string containing a link.
+    1) Added an if statement to check if a "!" exists before [].
+
+    2) Remove extra spaces in the string containing a link.
 
 ![Image](Images/Lab-Report-2/CodeDiffTestFile2.png)
+
 
 > Outputs after Debugging:
 
 ![Image](Images/Lab-Report-2/fixedTest2.png)
 
+
 > Discussion:
 
-In this test, the failure-inducing inputs were "extra spaces at both ends of a link" and "insertion of images", which caused symptoms, respectively: 1) the links with spaces were returned; 2) image directories were returned.
+    In this test, the failure-inducing inputs were "extra spaces at both ends of a link" and "insertion of images", which caused symptoms, respectively: 1) the links with spaces were returned; 2) image directories were returned.
 
-One of the bugs leading to these symptoms was that the original code did not check if the link inside the () is an URL or an image directory. In addition, another bug was that the original code did not check if any redundant space exists within (). Thus, basically, it printed out whatever in a () that is after [].
+    One of the bugs leading to these symptoms was that the original code did not check if the link inside the () is an URL or an image directory. In addition, another bug was that the original code did not check if any redundant space exists within (). Thus, basically, it printed out whatever in a () that is after [].
 
 ## Breaking Test Two
 
