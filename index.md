@@ -2,7 +2,7 @@
 
 Welcome to my [Main GitHub Page](https://jypipi.github.io/cse15l-lab-reports/index.html)!
 
-Go to my [public Github repository](https://github.com/jypipi/cse15l-lab-reports)
+Also welcome to my [public Github repository](https://github.com/jypipi/cse15l-lab-reports)!
 
 ## Lab Report 1 -- Week 2
 
