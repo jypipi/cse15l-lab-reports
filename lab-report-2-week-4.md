@@ -66,7 +66,7 @@ In the first test, these conditions were checked:
 ![Image](Images/Lab-Report-2/test2_file.png)
 
 
-> Debugging ([Code Changes](https://github.com/jypipi/markdown-parser/commit/219add11b4374cfa105d3b29c2e2f7bb3fb55110)):
+* Debugging ([Code Changes](https://github.com/jypipi/markdown-parser/commit/219add11b4374cfa105d3b29c2e2f7bb3fb55110)):
 
 1) Added an if statement to check if a "!" exists before [].
 
@@ -75,12 +75,12 @@ In the first test, these conditions were checked:
 ![Image](Images/Lab-Report-2/CodeDiffTestFile2.png)
 
 
-> Outputs after Debugging:
+* Outputs after Debugging:
 
 ![Image](Images/Lab-Report-2/fixedTest2.png)
 
 
-> Discussion:
+* Discussion:
 
 In this test, the failure-inducing inputs were "extra spaces at both ends of a link" and "insertion of images", which caused symptoms, respectively: 1) the links with spaces were returned; 2) image directories were returned.
 
