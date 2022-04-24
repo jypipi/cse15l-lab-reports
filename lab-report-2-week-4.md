@@ -205,3 +205,5 @@ These are the three code changes that were done in lab 3 for the following condi
 4) Empty strings within parentheses
 
 These experiences reveal how a program is improved by testing and checking. This lab goes through the process of error identification and debugging, which is essential to future programming work. Understanding its advantages, we'll be able to achieve more goals and have more fun when coding. Hope this report helps!
+
+> [Return to main page](https://jypipi.github.io/cse15l-lab-reports/index.html)
