@@ -1,46 +1,14 @@
-## CSE15L Lab2
-# Basic Syntax
+## CSE15L Lab Reports
 
-Welcome to **CSE15L** *Lab 2*!
+Here is my [GitHub Page](https://jypipi.github.io/cse15l-lab-reports/)
 
-Here is my [new GitHub Page](https://jypipi.github.io/cse15l-lab-reports/)
+# Lab Report 1 -- Week 2
 
-Screenshot:
+[Lab Report 1 (md file)](https://github.com/jypipi/cse15l-lab-reports/blob/main/lab-report-1-week-2.md)
 
-![Image](Images/Index/2.png)
+[Lab Report 1 (GitHub Page)](https://jypipi.github.io/cse15l-lab-reports/lab-report-1-week-2.html)
 
-> Oops! 404 Error!
 
-* One minute
+# Lab Report 2 -- Week 4
 
-- Two minutes
-
-3. Three minutes
-
-4) Four minutes
-
-5. Five minutes
-
----
-Try again!
-`https://jypipi.github.io/cse15l-lab-reports/`
-
-![Image](Images/Index/3.png)
-
-```
-# Code block
-print("Hello World!")
-System.out.println("Hello World!");
-```
-
-New Changes via VS Code
-```
-# VS Code
-print("Hello World again!")
-System.out.println("Hello World again!");
-```
-Way 1:
-[Lab Report 1](lab-report-1-week-2.html)
-
-Way 2:
-[Lab Report 1](https://jypipi.github.io/cse15l-lab-reports/lab-report-1-week-2.html)
+[Lab Report 2 (md file)](https://github.com/jypipi/cse15l-lab-reports/blob/main/lab-report-2-week-4.md)
