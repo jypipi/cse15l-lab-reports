@@ -87,15 +87,17 @@ $ cat ~/.ssh/id_ed25519.pub
 
 Here're what I got after the above operations:
 
-![Image](Images/Lab-Report-3/1_public_key_github.png)
-
 <p align="center">
 
-*Figure 1*: The public key stored on GitHub.
+  <img src="Images/Lab-Report-3/1_public_key_github.png">
 
 </p>
 
-![Image](Images/Lab-Report-3/2_public_and_private_keys_account.png)
+<p align="center">
+
+Figure 1: The public key stored on GitHub.
+
+</p>
 
 <p align="center">
 
@@ -103,7 +105,11 @@ Here're what I got after the above operations:
 
 </p>
 
-*Figure 2*: The public and private keys stored in my ieng6 account.
+<p align="center">
+
+Figure 2: The public and private keys stored in my ieng6 account.
+
+</p>
 
 Now let's try to commit and push a change to GitHub in my remote server:
 
