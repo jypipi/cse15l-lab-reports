@@ -95,7 +95,11 @@ Here're what I got after the above operations:
 
 </p>
 
+<p align="center">
+
 ![Image](Images/Lab-Report-3/2_public_and_private_keys_account.png)
+
+</p>
 
 *Figure 2*: The public and private keys stored in my ieng6 account.
 
