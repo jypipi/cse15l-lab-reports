@@ -205,10 +205,17 @@ Congratulations! We make it!
 Today, we covered multiple topics related to important system setup and basic Linux commands for future study.
 
 1) VScode Installation
+
 2) Remote Connection
+
 3) Trying Some Commands
+
 4) Transferring Files via `scp` Command
+
 5) Setting an SSH Key to Skip Entering Password
+
 6) Remote Running Optimization
 
 Following the above steps, we should be able to set up our computers, log into a remote server via SSH protocol, use commands to transfer files between local and remote hosts, complete tasks without passwords, and optimize our process for editing locally and running remotely.
+
+> [Return to Main Page](https://jypipi.github.io/cse15l-lab-reports/index.html)

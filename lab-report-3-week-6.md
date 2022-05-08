@@ -1,20 +1,20 @@
 # Week 6: Lab Report 3
 
-## Efficiency Improvement in Remote Server (ieng6)
+## Functions for Efficiency Improvement
 
 Hi there!
 
-This lab report will focus on improving our working efficiency by 1) streamlining ssh Configuration, 2) setting up Github access from ieng6, and 3) copying whole directories with scp -r to this remote server. In these ways, we'll be able to take advantage of the Linux-based remote system and lift our efficiency when working on both local and remote environments at the same time.
+This lab report will focus on improving our working efficiency by 1) streamlining SSH configuration, 2) setting up GitHub access from ieng6, and 3) copying whole directories with scp -r to this remote server. In these ways, we'll be able to take advantage of the Linux-based remote system and lift our efficiency when working on both local and remote environments at the same time.
 
 In this lab, we'll continue with the Markdown Parse program in which a java file reads a markdown file and detects the URL links in it. 
 
-## Streamline ssh Configuration
+## Streamline SSH Configuration
 
-Although we've already simplified the procedures for ssh into our ieng6 accounts without entering password, typing the user and host names before login is still time-consuming, which also means we have to always remember those figures correctly.
+Although we've already simplified the procedures for SSH into our ieng6 accounts without entering password, typing the user and host names for login is still time-consuming, which also means we have to always remember those figures correctly.
 
-Why not attempting to be "lazy"? In other words, we can **create a config file** to help us "remember" them.
+Why not attempting to be "lazy"? For example, we can **create a config file** to help us "remember" them.
 
-First, open a terminal (in my case, I used Git Bash):
+First, open a terminal:
 
 ```
 # Go to the directory /.ssh
@@ -26,6 +26,8 @@ $ touch config
 # Open this file
 $ nano config
 ```
+
+ In my case, I used Git Bash:
 
 ![Image](Images/Lab-Report-3/1-1.png)
 
@@ -53,7 +55,7 @@ ssh cse15l
 
 ![Image](Images/Lab-Report-3/1-3.png)
 
-Now we try to copy a file from my local machine to remote account using scp and my alias:
+Now we try to copy a file from my local machine to the remote account with scp and my alias:
 
 ```
 # Copy HelloWorld.py to ieng6
@@ -66,7 +68,7 @@ That's it!
 
 Now we can log into our remote accounts and run commands using our aliases directly!
 
-## Set up Github Access from ieng6
+## Set up Github Access from Remote Server (ieng6)
 
 To push our codes from ieng6 to GitHub, we need to utilize SSH keys to build the connection between these two platforms.
 
@@ -107,9 +109,11 @@ Figure 1: The public key stored on GitHub.
 
 <p align="center">
 
-Figure 2: The public and private keys stored in my ieng6 account.
+Figure 2: The public and private keys stored in my remote account.
 
 </p>
+
+* Commit and Push via git Commands
 
 Now let's try to commit and push a change to GitHub in my remote server:
 
@@ -139,18 +143,67 @@ $ git push origin main
 
 ![Image](Images/Lab-Report-3/3c.png)
 
-* Here's the link for the resulting commit:
+* The link for the resulting commit:
 
 [Here to check the commit](https://github.com/jypipi/markdown-parser/commit/d4ed78d6c33ad4670682da88c537b15ab3b0efeb)
 
 ## Copy Whole Directories with scp -r
 
-```
-# Copy necessary files, compile and run a test via one command
+Duplicating the whole working directory with one command can also greatly improve our efficiency. In this case, `scp -r` enables us to copy files recursively.
 
-$ scp -r *.java *.md lib/ cse15l:markdown-parse; ssh cse15l \
+> Copy the whole markdown-parse directory to the remote server
+
+```
+$ scp -r . cse15l:markdown-parse
+```
+
+![Image](Images/Lab-Report-3/3-1.png)
+
+> Compile and run the tests on remote server after copying
+
+```
+# Log in to ieng6 account and go to the directory
+$ ssh cse15l
+$ cd markdown-parse
+
+# Compile and run the JUnit test file
+
+$ javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java
+
+$ java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest
+```
+
+![Image](Images/Lab-Report-3/3-2.png)
+
+> Complete the above operations in one line
+
+```
+$ scp -r *.java *.md lib/ cse15l:markdown-parse; \
+  ssh cse15l \
   "cd markdown-parse; \
    /software/CSE/oracle-java-17/jdk-17.0.1/bin/javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; \
    /software/CSE/oracle-java-17/jdk-17.0.1/bin/java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest \
   "
 ```
+
+In PowerShell:
+
+![Image](Images/Lab-Report-3/3-3.png)
+
+In Git Bash:
+
+![Image](Images/Lab-Report-3/3-3_gitBash.png)
+
+# Conclusion
+
+Today, we covered three topics related to improving efficiency when we are working on both our local machines and remote server ieng6:
+
+1) Streamlining SSH Configuration
+
+2) Setup GitHub Access from ieng 6
+
+3) Copying the Whole Directory via `scp -r` Command
+
+Efficiency is gold! Taking advantage of the above functions, we will be able to complete tasks such as coding and debugging on local machines and the remote server more quickly and smoothly. That's all, see you next time!
+
+> [Return to Main Page](https://jypipi.github.io/cse15l-lab-reports/index.html)
