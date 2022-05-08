@@ -95,9 +95,11 @@ Here're what I got after the above operations:
 
 </p>
 
+![Image](Images/Lab-Report-3/2_public_and_private_keys_account.png)
+
 <p align="center">
 
-![Image](Images/Lab-Report-3/2_public_and_private_keys_account.png)
+  <img src="Images/Lab-Report-3/2_public_and_private_keys_account.png">
 
 </p>
 
