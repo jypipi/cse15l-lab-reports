@@ -19,6 +19,6 @@ Welcome to my [Main GitHub Page](https://jypipi.github.io/cse15l-lab-reports/ind
 
 ## Lab Report 3 -- Week 6
 
-[Lab Report 3 (md File) --- working in progress](https://github.com/jypipi/cse15l-lab-reports/blob/main/lab-report-3-week-6.md)
+[Lab Report 3 (md File)](https://github.com/jypipi/cse15l-lab-reports/blob/main/lab-report-3-week-6.md)
 
-[Lab Report 3 (GitHub Page) --- working in progress](https://jypipi.github.io/cse15l-lab-reports/lab-report-3-week-6.html)
+[Lab Report 3 (GitHub Page)](https://jypipi.github.io/cse15l-lab-reports/lab-report-3-week-6.html)

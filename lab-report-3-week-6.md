@@ -115,7 +115,7 @@ Figure 2: The public and private keys stored in my remote account.
 
 * Commit and Push via git Commands
 
-Now let's try to commit and push a change to GitHub in my remote server:
+Now let's try to commit and push a change to GitHub on remote server:
 
 ```
 # test my SSH connection
@@ -135,7 +135,7 @@ $ git commit -m "Commit thru ieng6"
 $ git push origin main
 ```
 
-* Screenshots of my steps to push my updates to GitHub in remote server
+* Screenshots of my steps to push my updates to GitHub on remote server
 
 ![Image](Images/Lab-Report-3/3a.png)
 
