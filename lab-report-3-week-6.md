@@ -4,9 +4,9 @@
 
 Hi there!
 
-In this lab report, we will focus on improving our working efficiency by 1) streamlining SSH configuration, 2) setting up GitHub access from ieng6, and 3) copying whole directories with scp -r to this remote server. In these ways, we'll be able to take advantage of the Linux-based remote system and lift our efficiency when working on both local and remote environments at the same time.
+In this lab report, we'll focus on improving our working efficiency by 1) streamlining SSH configuration, 2) setting up GitHub access from ieng6, and 3) copying whole directories with scp -r to this remote server. In these ways, we'll be able to take advantage of the Linux-based remote system and lift our efficiency when working on both local and remote environments at the same time.
 
-For this lab, we continue with the Markdown Parse program in which a java file reads a markdown file and detects the URL links in it. 
+For demonstration purposes, we're going to continue with the Markdown Parse program in which a java file reads a markdown file and detects the URL links in it. 
 
 ## Streamline SSH Configuration
 
