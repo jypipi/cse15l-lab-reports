@@ -151,7 +151,7 @@ $ git push origin main
 
 Duplicating the whole working directory with one command can also greatly improve our efficiency. In this case, `scp -r` enables us to copy files recursively.
 
-> Copy the whole markdown-parse directory to the remote server
+* Copy the whole markdown-parse directory to the remote server
 
 ```
 $ scp -r . cse15l:markdown-parse
@@ -159,7 +159,7 @@ $ scp -r . cse15l:markdown-parse
 
 ![Image](Images/Lab-Report-3/3-1.png)
 
-> Compile and run the tests on remote server after copying
+* Compile and run the tests on remote server after copying
 
 ```
 # Log in to ieng6 account and go to the directory
@@ -175,7 +175,7 @@ $ java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUn
 
 ![Image](Images/Lab-Report-3/3-2.png)
 
-> Complete the above operations in one line
+* Complete the above operations in one line
 
 ```
 $ scp -r *.java *.md lib/ cse15l:markdown-parse; \
