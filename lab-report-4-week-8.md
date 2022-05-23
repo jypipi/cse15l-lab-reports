@@ -52,7 +52,7 @@ $ git clone git@github.com:brandoluu/markdown-parser.git
 ![Image](Images\Lab-Report-4\1.png)
 
 ```
-[google.com, google.com, ucsd.edu]
+[`google.com, google.com, ucsd.edu]
 ```
 
 * Test Code in MarkdownParseTest.java
@@ -65,13 +65,16 @@ $ git clone git@github.com:brandoluu/markdown-parser.git
         String content = Files.readString(file);
         ArrayList<String> links = MarkdownParse.getLinks(content);
         ArrayList<String> result = new ArrayList<String>(
-            Arrays.asList("google.com", "google.com", "ucsd.edu"));
+            Arrays.asList("`google.com", "google.com", "ucsd.edu"));
 
-        assertEquals(true, links.equals(result));
+        assertEquals(3, links.size());
+        assertEquals("`google.com", links.get(0));
+        assertEquals("google.com", links.get(1));
+        assertEquals("ucsd.edu", links.get(2));
     }
 
 // For reviewed repo's implementation
-    @Test
+@Test
     public void checkReviewedSnippet1() throws IOException {
         Path file = Path.of("LabReport4-Snippet-1.md");
         String content = Files.readString(file);
@@ -79,9 +82,12 @@ $ git clone git@github.com:brandoluu/markdown-parser.git
         // Call getLinks() of the reviewed repo's MarkdownParse file
         ArrayList<String> links = reviewedMarkdownParse.getLinks(content);
         ArrayList<String> result = new ArrayList<String>(
-            Arrays.asList("google.com", "google.com", "ucsd.edu"));
+            Arrays.asList("`google.com", "google.com", "ucsd.edu"));
 
-        assertEquals(true, links.equals(result));
+        assertEquals(3, links.size());
+        assertEquals("`google.com", links.get(0));
+        assertEquals("google.com", links.get(1));
+        assertEquals("ucsd.edu", links.get(2));
     }
 ```
 
@@ -97,7 +103,15 @@ $ git clone git@github.com:brandoluu/markdown-parser.git
 
 * Discussion
 
-#[Discussion here]
+In this case, a small code change can make my program work for the existence of backticks:
+
+1) When my code generates a substring between a pair of parentheses, it would check if there is a "`" existing between currentIndex and openBracket. If so, skip this substring and move on to another loop.
+
+2) In normal situation, after updating currentIndex and before running next loop, the code would check if there is a "`" existing between currentIndex and next openBracket. If so, update currentIndex to the next index of the backtick.
+
+![Image](Images\Lab-Report-4\fix1.png)
+
+![Image](Images\Lab-Report-4\pass1.png)
 
 
 ## Snippet 2
@@ -119,7 +133,7 @@ $ git clone git@github.com:brandoluu/markdown-parser.git
 ![Image](Images\Lab-Report-4\2.png)
 
 ```
-[a.com, a.com, example.com]
+[a.com, a.com(()), example.com]
 ```
 
 * Test Code in MarkdownParseTest.java
@@ -132,9 +146,12 @@ $ git clone git@github.com:brandoluu/markdown-parser.git
         String content = Files.readString(file);
         ArrayList<String> links = MarkdownParse.getLinks(content);
         ArrayList<String> result = new ArrayList<String>(
-            Arrays.asList("a.com", "a.com", "example.com"));
+            Arrays.asList("a.com", "a.com(())", "example.com"));
 
-        assertEquals(true, links.equals(result));
+        assertEquals(3, links.size());
+        assertEquals("a.com", links.get(0));
+        assertEquals("a.com(())", links.get(1));
+        assertEquals("example.com", links.get(2));
     }
 
 // For reviewed repo's implementation
@@ -146,9 +163,12 @@ $ git clone git@github.com:brandoluu/markdown-parser.git
         // Call getLinks() of the reviewed repo's MarkdownParse file
         ArrayList<String> links = reviewedMarkdownParse.getLinks(content);
         ArrayList<String> result = new ArrayList<String>(
-            Arrays.asList("a.com", "a.com", "example.com"));
+            Arrays.asList("a.com", "a.com(())", "example.com"));
 
-        assertEquals(true, links.equals(result));
+        assertEquals(3, links.size());
+        assertEquals("a.com", links.get(0));
+        assertEquals("a.com(())", links.get(1));
+        assertEquals("example.com", links.get(2));
     }
 ```
 
@@ -164,7 +184,7 @@ $ git clone git@github.com:brandoluu/markdown-parser.git
 
 * Discussion
 
-#[Discussion here]
+For this case, I don't think a small code change can fix the bugs with nested parentheses, brackets, and escaped brackets in my program. One of the reasons is that I have to use an if statement to check if there is a pair of parentheses before next open bracket, which takes several lines of code. Furthermore, because of the existence of nested parentheses, I need to employ multiple lines of code to deal with this situation. Thus, a more involved change would be needed to fix these bugs.
 
 
 ## Snippet 3
@@ -206,6 +226,8 @@ And then there's more text
 
 ![Image](Images\Lab-Report-4\3.png)
 
+In this case, although those URLs were printed out by the CommonMark, they were not counted as links under the multiple-line situation. Thus, the expected output is an empty list.
+
 ```
 []
 ```
@@ -221,7 +243,7 @@ And then there's more text
         ArrayList<String> links = MarkdownParse.getLinks(content);
         ArrayList<String> result = new ArrayList<String>(Arrays.asList());
 
-        assertEquals(true, links.equals(result));
+        assertEquals(0, links.size());
     }
 
 // For reviewed repo's implementation
@@ -234,7 +256,7 @@ And then there's more text
         ArrayList<String> links = reviewedMarkdownParse.getLinks(content);
         ArrayList<String> result = new ArrayList<String>(Arrays.asList());
 
-        assertEquals(true, links.equals(result));
+        assertEquals(0, links.size());
     }
 ```
 
@@ -250,13 +272,12 @@ And then there's more text
 
 * Discussion
 
-#[Discussion here]
+For this situation, a small code change cannot fix this bug with separated parentheses and brackets in multiple lines. The error shown in the above output can be fixed with two lines of code in which an if statement is used to check if there is a potential link in the remaining substring. However, since the CommonMark does not accept those URLs within separated parentheses while my program counts the content within () as a valid link, an involved change is needed to deal with the separated parentheses and brackets and exclude the URLs within them, which would exceed the number of 10 lines of code change.
 
 
 # Conclusion
 
-Today, we covered a main theme that testing and debugging our Markdown Parse 
-program via JUnit tests and code snippets that provide multiple situations:
+In this report, we covered a main theme that testing and debugging our Markdown Parse program via JUnit tests and code snippets that provide multiple situations:
 
 1) Inline Code with Backticks
 
@@ -264,7 +285,7 @@ program via JUnit tests and code snippets that provide multiple situations:
 
 3) Newlines Existing in Brackets and Parentheses
 
-Perfection can hardly be reached in one time. When practicing continuous integration, we will be able to keep improving our programs to make it suit increasing situations by testing and debugging. Therefore, as our codes "grow up", so do our programming
+Perfection can hardly be reached in one time. When practicing continuous integration, we will be able to keep improving our programs to make it suit more situations by testing and debugging. Therefore, as our codes "grow up", so do our programming
 skills!
 
 See you next time!
