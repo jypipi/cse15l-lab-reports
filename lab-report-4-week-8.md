@@ -47,9 +47,9 @@ $ git clone git@github.com:brandoluu/markdown-parser.git
 [`code]`](ucsd.edu)
 ```
 
-![Image](Images\Lab-Report-4\1.png)
-
 * Expected Output
+
+![Image](Images\Lab-Report-4\1.png)
 
 ```
 [google.com, google.com, ucsd.edu]
@@ -58,14 +58,42 @@ $ git clone git@github.com:brandoluu/markdown-parser.git
 * Test Code in MarkdownParseTest.java
 
 ```
+// For my implementation
+@Test
+    public void checkSnippet1() throws IOException {
+        Path file = Path.of("LabReport4-Snippet-1.md");
+        String content = Files.readString(file);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> result = new ArrayList<String>(
+            Arrays.asList("google.com", "google.com", "ucsd.edu"));
 
+        assertEquals(true, links.equals(result));
+    }
+
+// For reviewed repo's implementation
+    @Test
+    public void checkReviewedSnippet1() throws IOException {
+        Path file = Path.of("LabReport4-Snippet-1.md");
+        String content = Files.readString(file);
+
+        // Call getLinks() of the reviewed repo's MarkdownParse file
+        ArrayList<String> links = reviewedMarkdownParse.getLinks(content);
+        ArrayList<String> result = new ArrayList<String>(
+            Arrays.asList("google.com", "google.com", "ucsd.edu"));
+
+        assertEquals(true, links.equals(result));
+    }
 ```
 
 * Actual Outputs
 
-```
+1) For my implementation
 
-```
+![Image](Images\Lab-Report-4\output1.png)
+
+2) For the reviewed repo's implementation
+
+![Image](Images\Lab-Report-4\reviewed1.png)
 
 * Discussion
 
@@ -86,9 +114,9 @@ $ git clone git@github.com:brandoluu/markdown-parser.git
 [some escaped \[ brackets \]](example.com)
 ```
 
-![Image](Images\Lab-Report-4\2.png)
-
 * Expected Output
+
+![Image](Images\Lab-Report-4\2.png)
 
 ```
 [a.com, a.com, example.com]
@@ -97,14 +125,42 @@ $ git clone git@github.com:brandoluu/markdown-parser.git
 * Test Code in MarkdownParseTest.java
 
 ```
+// For my implementation
+@Test
+    public void checkSnippet2() throws IOException {
+        Path file = Path.of("LabReport4-Snippet-2.md");
+        String content = Files.readString(file);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> result = new ArrayList<String>(
+            Arrays.asList("a.com", "a.com", "example.com"));
 
+        assertEquals(true, links.equals(result));
+    }
+
+// For reviewed repo's implementation
+@Test
+    public void checkReviewedSnippet2() throws IOException {
+        Path file = Path.of("LabReport4-Snippet-2.md");
+        String content = Files.readString(file);
+
+        // Call getLinks() of the reviewed repo's MarkdownParse file
+        ArrayList<String> links = reviewedMarkdownParse.getLinks(content);
+        ArrayList<String> result = new ArrayList<String>(
+            Arrays.asList("a.com", "a.com", "example.com"));
+
+        assertEquals(true, links.equals(result));
+    }
 ```
 
 * Actual Outputs
 
-```
+1) For my implementation
 
-```
+![Image](Images\Lab-Report-4\output2.png)
+
+2) For the reviewed repo's implementation
+
+![Image](Images\Lab-Report-4\reviewed2.png)
 
 * Discussion
 
@@ -146,25 +202,51 @@ while](https://cse.ucsd.edu/
 And then there's more text
 ```
 
-![Image](Images\Lab-Report-4\3.png)
-
 * Expected Output
 
+![Image](Images\Lab-Report-4\3.png)
+
 ```
-[https://www.twitter.com, https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule, https://cse.ucsd.edu/]
+[]
 ```
 
 * Test Code in MarkdownParseTest.java
 
 ```
+// For my implementation
+@Test
+    public void checkSnippet3() throws IOException {
+        Path file = Path.of("LabReport4-Snippet-3.md");
+        String content = Files.readString(file);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> result = new ArrayList<String>(Arrays.asList());
 
+        assertEquals(true, links.equals(result));
+    }
+
+// For reviewed repo's implementation
+@Test
+    public void checkReviewedSnippet3() throws IOException {
+        Path file = Path.of("LabReport4-Snippet-3.md");
+        String content = Files.readString(file);
+
+        // Call getLinks() of the reviewed repo's MarkdownParse file
+        ArrayList<String> links = reviewedMarkdownParse.getLinks(content);
+        ArrayList<String> result = new ArrayList<String>(Arrays.asList());
+
+        assertEquals(true, links.equals(result));
+    }
 ```
 
 * Actual Outputs
 
-```
+1) For my implementation
 
-```
+![Image](Images\Lab-Report-4\output3.png)
+
+2) For the reviewed repo's implementation
+
+![Image](Images\Lab-Report-4\reviewed3.png)
 
 * Discussion
 
