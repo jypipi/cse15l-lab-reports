@@ -35,6 +35,8 @@ $ git clone git@github.com:brandoluu/markdown-parser.git
 
 * Snippet 1 Content
 
+(Based on the report writeup downloaded on 05/19/2022)
+
 ```
 `[a link`](url.com)
 
@@ -50,7 +52,7 @@ $ git clone git@github.com:brandoluu/markdown-parser.git
 * Expected Output
 
 ```
-[url.com, google.com]
+[google.com, google.com, ucsd.edu]
 ```
 
 * Test Code in MarkdownParseTest.java
@@ -74,6 +76,8 @@ $ git clone git@github.com:brandoluu/markdown-parser.git
 
 * Snippet 2 Content
 
+(Based on the report writeup downloaded on 05/19/2022)
+
 ```
 [a [nested link](a.com)](b.com)
 
@@ -87,7 +91,7 @@ $ git clone git@github.com:brandoluu/markdown-parser.git
 * Expected Output
 
 ```
-[a.com, b.com, a.com, example.com]
+[a.com, a.com, example.com]
 ```
 
 * Test Code in MarkdownParseTest.java
@@ -110,6 +114,8 @@ $ git clone git@github.com:brandoluu/markdown-parser.git
 ## Snippet 3
 
 * Snippet 3 Content
+
+(Based on the report writeup downloaded on 05/19/2022)
 
 ```
 [this title text is really long and takes up more than
@@ -145,7 +151,7 @@ And then there's more text
 * Expected Output
 
 ```
-[https://www.twitter.com, https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule, github.com, https://cse.ucsd.edu/]
+[https://www.twitter.com, https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule, https://cse.ucsd.edu/]
 ```
 
 * Test Code in MarkdownParseTest.java
