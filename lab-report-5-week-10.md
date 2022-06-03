@@ -12,15 +12,15 @@ Let's go!
 
 ## Preparation
 
-To run the tests and compare the results efficiently, I saved the outputs of the two implementations in two files and then employed a powerful tool `vimdiff` that can highlight the differences line by line.
+To run the tests and compare the results efficiently, I saved the outputs of the two implementations in two files and then employed a powerful tool `vimdiff` to highlight the differences line by line.
 
 ```
 # A Simplified Procedure
 
-# Save my implementation's output
+# Run tests and save my implementation's output
 $ bash script.sh > resultsForReport5MyParse.txt
 
-# Save the provided implementation's output
+# Run tests and save the provided implementation's output
 $ bash script.sh > resultsForReport5Provided.txt
 
 # Run vimdiff to see differences
