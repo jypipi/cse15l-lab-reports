@@ -73,13 +73,13 @@ $ https://github.com/nidhidhamnani/markdown-parser/blob/main/test-files/201.md
 
 1. In this case, **my implementation** is correct.
 
-2. Bug in the provided implementation: this program doesn't check the content between brackets [] and parentheses (). After it confirms the existence of parentheses, it creates a string called potentialLink to store the content within the parentheses and only checks this string without considering the content between the closed bracket and the open parenthesis. Therefore, in this case, when "<>" exists between them, the content within () should not be considered a valid link while the provided program still adds it to the returned list.
+2. **Bug in the provided implementation**: this program doesn't check the content between brackets [] and parentheses (). After it confirms the existence of parentheses, it creates a string called potentialLink to store the content within the parentheses and only checks this string without considering the content between the closed bracket and the open parenthesis. Therefore, in this case, when "<>" exists between them, the content within () should not be considered a valid link while the provided program still adds it to the returned list.
 
-3. Code that should be fixed and possible changes:
+3. **Code that should be fixed** and possible changes:
 
 ![Image](Images\Lab-Report-5\test201CodeNeededFixed.png)
 
-One of the possible changes is that, between line 73 and 74, it can create a string to store the content between closed bracket and open parenthesis and then add an if statement to check its content. If "<>" exists, skip this pair of (), update currentIndex, and move on to another loop.
+One of the possible changes is that, between line 73 and 74, the program can create a string to store the content between closed bracket and open parenthesis and then add an if statement to check its content. If "<>" exists, skip this pair of (), update currentIndex, and move on to another loop.
 
 
 ## Test 2
@@ -121,9 +121,9 @@ _(bar)_.
 
 1. In this case, **the provided implementation** is correct.
 
-2. Bug in my implementation: to handle the inputs provided in the previous weeks, I added an if-else if-else statement in my program to distinguish the following situations: a link exists while: 1) only [] or () exists; 2) neither of them exists in a markdown file. However, one of its disadvantages is that, as long as () exists, the program considers the content within the () a valid link even though it's not.
+2. **Bug in my implementation**: to handle the inputs provided in the previous weeks, I added an if-else if-else statement in my program to distinguish the following situations: a link exists while: 1) only [] or () exists; 2) neither of them exists in a markdown file. However, one of its disadvantages is that, as long as () exists, the program considers the content within the () a valid link even though it's not.
 
-3. Code that should be fixed and possible changes:
+3. **Code that should be fixed** and possible changes:
 
 ![Image](Images\Lab-Report-5\test376CodeNeededFixed.png)
 
