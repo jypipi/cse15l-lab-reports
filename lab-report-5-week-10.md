@@ -1,6 +1,6 @@
 # Week 10: Lab Report 5
 
-## Continued Testing of Markdown Parse with Vim
+## Continued Testing of Markdown Parse with `vimdiff`
 
 Hi there!
 
