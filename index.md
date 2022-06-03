@@ -29,3 +29,10 @@ Welcome to my [Main GitHub Page](https://jypipi.github.io/cse15l-lab-reports/ind
 [Lab Report 4 (md File）](https://github.com/jypipi/cse15l-lab-reports/blob/main/lab-report-4-week-8.md)
 
 [Lab Report 4 (GitHub Page)](https://jypipi.github.io/cse15l-lab-reports/lab-report-4-week-8.html)
+
+
+## Lab Report 5 -- Week 10
+
+[Lab Report 5 (md File）](https://github.com/jypipi/cse15l-lab-reports/blob/main/lab-report-5-week-10.md)
+
+[Lab Report 5 (GitHub Page)](https://jypipi.github.io/cse15l-lab-reports/lab-report-5-week-10.html)
